@@ -1,10 +1,10 @@
 {
     "$schema": "http://json.schemastore.org/vsix-publish",
-    "categories": [ "tools", "coding", "testing" ],
+    "categories": [ "coding", "testing" ],
     "identity": {
         "internalName": "vs-clove-unit"
     },
-    "overview": "../README.md",
+    "overview": "overview.md",
     "priceCategory": "free",
     "publisher": "fdefelici",
     "private": false,
@@ -13,11 +13,7 @@
     "assetFiles": [
         {
             "pathOnDisk": "..\\..\\Examples\\Images\\header.png",
-            "targetPath": "Examples/Images/header.png"
-        },
-        {
-            "pathOnDisk": "..\\..\\Examples\\Images\\select-runsettings.png",
-            "targetPath": "Examples/Images/select-runsettings.png"
+            "targetPath": "header.png"
         }
     ]
 }

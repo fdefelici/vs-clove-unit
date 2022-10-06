@@ -1,5 +1,0 @@
-Release Notes for v0.1.0 
-#Features
-- Support for Visual Studio 2022
-- Apdater configuration throught .runsettings file
-- Support clove-unit library v2.3.X

@@ -88,3 +88,6 @@ Once you have your Run Settings file ready:
 
 # Example
 A project example is available in the [Examples](./Examples) folder where a CLove-Unit test project is configured with both *minimal* and *full* Run Settings files.
+
+# Changelog
+History of changes [here](./CHANGELOG.md).
