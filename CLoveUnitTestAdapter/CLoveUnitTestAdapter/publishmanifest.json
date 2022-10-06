@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json.schemastore.org/vsix-publish",
+    "categories": [ "tools", "coding", "testing" ],
+    "identity": {
+        "internalName": "vs-clove-unit"
+    },
+    "overview": "../README.md",
+    "priceCategory": "free",
+    "publisher": "fdefelici",
+    "private": false,
+    "qna": true,
+    "repo": "https://github.com/fdefelici/vs-clove-unit",
+    "assetFiles": [
+        {
+            "pathOnDisk": "..\\..\\Examples\\Images\\header.png",
+            "targetPath": "Examples/Images/header.png"
+        },
+        {
+            "pathOnDisk": "..\\..\\Examples\\Images\\select-runsettings.png",
+            "targetPath": "Examples/Images/select-runsettings.png"
+        }
+    ]
+}

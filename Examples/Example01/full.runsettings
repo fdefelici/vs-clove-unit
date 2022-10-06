@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <CLoveUnit>
+    <AdapterEnabled>true</AdapterEnabled>
+    <DebugEnabled>true</DebugEnabled>
+    <ExecNameRegex>.+Test</ExecNameRegex>
+  </CLoveUnit>
+</RunSettings>
+
