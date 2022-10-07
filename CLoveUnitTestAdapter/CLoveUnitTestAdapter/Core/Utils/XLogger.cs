@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
+﻿using System.Threading;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel.Logging;
 
 namespace CLoveUnitTestAdapter.Core
 {
@@ -26,15 +27,13 @@ namespace CLoveUnitTestAdapter.Core
 
     public class XLogger : IXLogger
     {
-        
-        //TODO: To differenziate log instead of using UUID just use the binary name....
         public static XLogger From(IMessageLogger logger)
         {
             return new XLogger(logger);
         }
 
-        private IMessageLogger _logger;
-        private const string LOG_FORMAT = "[CLoveUnitTestAdapter][{0}] {1}"; //TODO: Put in CloveConfig?
+        private readonly IMessageLogger _logger;
+        private const string LOG_FORMAT = "[CLoveUnitTestAdapter][{0}] {1}"; 
 
         public bool DebugEnabled { get; set; }
 
@@ -46,29 +45,35 @@ namespace CLoveUnitTestAdapter.Core
 
         public void Info(string message)
         {
-            Log(TestMessageLevel.Informational, string.Format(LOG_FORMAT, "INFO", message));
+            Log(TestMessageLevel.Informational, "INFO", message);
         }
 
         public void Warn(string message)
         {
-            Log(TestMessageLevel.Warning, string.Format(LOG_FORMAT, "WARN", message));
+            Log(TestMessageLevel.Warning, "WARN", message);
         }
 
         public void Erro(string message)
         {
-            Log(TestMessageLevel.Error, string.Format(LOG_FORMAT, "ERRO", message));
+            Log(TestMessageLevel.Error, "ERRO", message);
         }
 
         public void Trace(string message)
         {
-            Log(TestMessageLevel.Informational, string.Format(LOG_FORMAT, "TRAC", message));
+            Log(TestMessageLevel.Informational, "TRAC", message);
         }
 
         //TODO: Understand of to make logging only for debugging
         public void Debug(string message)
         {
             if (!DebugEnabled) return;
-            Log(TestMessageLevel.Informational, string.Format(LOG_FORMAT, "DEBG", message));
+            Log(TestMessageLevel.Informational, "DEBG", message);
+        }
+
+
+        private void Log(TestMessageLevel level, string levelStr, string message)
+        {
+            Log(level, string.Format(LOG_FORMAT, levelStr, message));
         }
 
         private void Log(TestMessageLevel level, string message)
