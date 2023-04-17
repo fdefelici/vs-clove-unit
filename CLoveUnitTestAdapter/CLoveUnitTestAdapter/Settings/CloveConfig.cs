@@ -4,7 +4,7 @@
     {
         public const string TestExecutorUri = "executor://CLoveUnitTestExecutor";
         public const string TestFileExtension = ".exe";
-        public static XVersion SupportedCloveVersion = new XVersion(2, 3, 0);
+        public static XVersion SupportedCloveVersion = new XVersion(2, 4, 0);
         public const string BinaryMagicStringRaw = "https://github.com/fdefelici/clove-unit";
         //public const string DotVsDirName = ".vs";
         public const string CacheBaseDirName  = ".cloveunit";

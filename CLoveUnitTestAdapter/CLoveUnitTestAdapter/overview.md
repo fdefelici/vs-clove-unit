@@ -13,8 +13,8 @@ CLove Unit Test Adapter is a Visual Studio extension providing discovery and exe
 > It's a Single Header Unit Testing library for C/C++ language, which make easy developer life. Give it a try! ;-)
 
 ## Features
-* Support CLove-Unit library v2.3.X
-* Support Visual Studio version: 2022 (aka v17.x)
+* Integrates CLove-Unit library v2.4.X
+* Supports Visual Studio version: 2022 (aka v17.x)
 * Tests discovery/execution for ```Test Explorer```
 * Test console output displayed on test detail panel (only when running a single test)
 * Configuration throught standard ```Run Settings``` files

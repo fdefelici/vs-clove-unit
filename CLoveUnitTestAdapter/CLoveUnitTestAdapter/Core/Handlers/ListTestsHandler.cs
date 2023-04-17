@@ -50,8 +50,8 @@ namespace CLoveUnitTestAdapter.Core
                 {
                     string supported = CloveConfig.SupportedCloveVersion.AsMinorString();
                     string current = versionFound.AsString();
-                    _logger.Erro($"clove-unit.h v{current} has been detected for: ${binary.FilePath}");
-                    _logger.Info($"This adapter is compatible with clove-unit.h v{supported}");
+                    _logger.Erro($"clove-unit.h v{current} has been detected for: {binary.FilePath}");
+                    _logger.Info($"This adapter requires clove-unit.h v{supported}");
                     _logger.Info($"Please update this adapter (if any) or use a compatible clove-unit.h!");
                     return;
                 }
