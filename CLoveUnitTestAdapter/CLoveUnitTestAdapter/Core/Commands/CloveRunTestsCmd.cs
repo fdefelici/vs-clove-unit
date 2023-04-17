@@ -135,6 +135,38 @@ namespace CLoveUnitTestAdapter.Core.Commands
                                             $"   {act}";
                                         break;
                                     }
+                                case "GT":
+                                    {
+                                        assertMsg =
+                                            $"Expected:{Environment.NewLine}" +
+                                            $"   {exp} > {act}{Environment.NewLine}" +
+                                            $"But wasn't";
+                                        break;
+                                    }
+                                case "GTE":
+                                    {
+                                        assertMsg =
+                                            $"Expected:{Environment.NewLine}" +
+                                            $"   {exp} >= {act}{Environment.NewLine}" +
+                                            $"But wasn't";
+                                        break;
+                                    }
+                                case "LT":
+                                    {
+                                        assertMsg =
+                                            $"Expected:{Environment.NewLine}" +
+                                            $"   {exp} < {act}{Environment.NewLine}" +
+                                            $"But wasn't";
+                                        break;
+                                    }
+                                case "LTE":
+                                    {
+                                        assertMsg =
+                                            $"Expected:{Environment.NewLine}" +
+                                            $"   {exp} <= {act}{Environment.NewLine}" +
+                                            $"But wasn't";
+                                        break;
+                                    }
                                 case "FAIL": { assertMsg = $"a fail assertion has been met!"; break; }
                                 default: { assertMsg = "<undefined>"; break; }
                             }

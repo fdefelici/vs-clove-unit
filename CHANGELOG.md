@@ -1,5 +1,9 @@
 # CLove-Unit Test Adapter for VS Changelog
 
+## v0.2.0: April 17, 2023 
+### Features
+- Update for clove-unit v2.4.0 (now this adapter support only clove-unit v2.4.X)
+
 ## v0.1.2: October 7, 2022 
 ### Maintainance
 - Improved discovery integration with clove-unit

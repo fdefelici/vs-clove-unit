@@ -13,8 +13,8 @@ CLove Unit Test Adapter is a Visual Studio extension providing discovery and exe
 > It's a Single Header Unit Testing library for C/C++ language, which make easy developer life. Give it a try! ;-)
 
 ## Features
-* Support CLove-Unit library v2.3.X
-* Support Visual Studio version: 2022 (aka v17.x)
+* Integrates CLove-Unit library v2.4.X
+* Supports Visual Studio version: 2022 (aka v17.x)
 * Tests discovery/execution for ```Test Explorer```
 * Test console output displayed on test detail panel (only when running a single test)
 * Configuration throught standard ```Run Settings``` files
@@ -83,8 +83,14 @@ Once you have your Run Settings file ready:
 
 <br />
 
-> NOTE: In case Test Adapter doesn't discover any tests or doesn't apply latest Run Settings configuration, try to Clean/Build the test project(s) in order to force *Test Explorer* to update its internal cache.
+> NOTE: In case Test Adapter doesn't discover any tests or doesn't apply latest Run Settings configuration, try to Clean/Build the test project(s) in order to force *Test Explorer* to update its internal cache, or check if you are using a compatible clove-unit.h version (read more in [Troubleshooting](#troubleshooting) section)
 
+## Troubleshooting
+In case the adapter fails to discover tests:
+- First, try to `Clean / Build` the test projects(s). This will clear *Test Explorer* caches and force it to discover test from scratch calling this adapter.
+- Second, try to check if `clove-unit.h` version used is compatible with the one supported by the adapter. You can check it on `Visual Studio` `Output window`, selecting `Tests` and you should see a specific message coming from the adapter as shown in the image below.
+
+![CLove-Unit Troubles](Examples/Images/trouble-clove-version.png)
 
 # Example
 A project example is available in the [Examples](./Examples) folder where a CLove-Unit test project is configured with both *minimal* and *full* Run Settings files.
