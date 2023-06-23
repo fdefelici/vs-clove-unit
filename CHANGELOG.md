@@ -1,5 +1,9 @@
 # CLove-Unit Test Adapter for VS Changelog
 
+## v0.2.1: June 26, 2023 
+### Bug Fixes
+- Adapter failed executing tests when project path contained space character(s)
+
 ## v0.2.0: April 17, 2023 
 ### Features
 - Update for clove-unit v2.4.0 (now this adapter support only clove-unit v2.4.X)
