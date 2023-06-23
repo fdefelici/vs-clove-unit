@@ -17,7 +17,7 @@ namespace CLoveUnitTestAdapter.Core.Commands
         private string _jsonReportPath;
 
         public CloveRunTestsCmd(
-            XTestProcessMgr procMgr, string binaryPath, XLogger logger, 
+            XTestProcessMgr procMgr, string binaryPath, IXLogger logger, 
             IEnumerable<TestCase> tests, bool isRunTestSelective,
             ITestExecutionRecorder recorder, string reportBasePath) 
             : base(procMgr, binaryPath, logger)
@@ -33,7 +33,7 @@ namespace CLoveUnitTestAdapter.Core.Commands
         protected override string GetArgs()
         {
             StringBuilder runArgs = new StringBuilder();
-            runArgs.Append($"--run-tests --report json --output {_jsonReportPath}");
+            runArgs.Append($"--run-tests --report json --output \"{_jsonReportPath}\"");
             if (_isRunTestSelective)
             {
                 foreach (TestCase eachTest in _tests)

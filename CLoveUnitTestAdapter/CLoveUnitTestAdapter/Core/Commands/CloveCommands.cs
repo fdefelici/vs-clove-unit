@@ -29,12 +29,12 @@ namespace CLoveUnitTestAdapter.Core
     {
         private XTestProcessMgr _procMgr;
         protected string _binaryPath;
-        protected XLogger _logger;
+        protected IXLogger _logger;
         public bool IsFailure { get { return !IsSuccess; } }
         public bool IsSuccess { get; internal set; }
         public string StdOut { get; internal set; }
 
-        public ACloveCommand(XTestProcessMgr procMgr, string binaryPath, XLogger logger)
+        public ACloveCommand(XTestProcessMgr procMgr, string binaryPath, IXLogger logger)
         {
             _procMgr = procMgr;
             _binaryPath = binaryPath;

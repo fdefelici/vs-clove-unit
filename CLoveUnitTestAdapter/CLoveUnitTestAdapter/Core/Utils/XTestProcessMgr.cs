@@ -86,7 +86,7 @@ namespace CLoveUnitTestAdapter.Core
             _fwkHandle = frameworkHandle;
         }
 
-        public XProcResult RunProcess(string exec, string args)
+        public virtual XProcResult RunProcess(string exec, string args)
         {
             if (_runContext.IsBeingDebugged) return RunDebug(exec, args);
             else return RunNormal(exec, args);
